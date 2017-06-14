@@ -6,8 +6,9 @@ class Api::V1::StudentsController < ApplicationController
   end
 
   def create
+    # parmas {student: {name: 'Fido Jones'}}
     student = Student.create(student_params)
-    render json: student
+    render json: student # {id: 10, name: 'Fido Jones', }
   end
 
   def update
