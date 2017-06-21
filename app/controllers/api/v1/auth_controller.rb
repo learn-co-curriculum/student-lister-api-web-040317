@@ -16,7 +16,8 @@ class Api::V1::AuthController < ApplicationController
        # if they do, render back a json response of the user info
        render json: {
         id: user.id,
-        username: user.username
+        username: user.username,
+        jwt: JWT.encode({user_id: user.id}, ENV['JWT_SECRET'], ENV['JWT_ALGORITHM'])
        }
      else
       # otherwise, render back some error response
