@@ -11,9 +11,13 @@ class Api::V1::StudentsController < ApplicationController
   end
 
   def update
-    student = Student.find(params[:id])
-    student.update(student_params)
-    render json: student
+    not_student = Student.find(params[:id])
+    not_student.update(student_params)
+    render json: not_student
+  end
+
+  def gold_team_rules
+    puts "GOLD TEAM RULES"
   end
 
   def destroy
