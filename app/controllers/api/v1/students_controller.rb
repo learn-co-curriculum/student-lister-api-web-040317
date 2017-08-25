@@ -6,10 +6,6 @@ class Api::V1::StudentsController < ApplicationController
     render json: students
   end
 
-  def gene_gene
-    puts "Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene!!!!!!!!!!!!!!!!"
-  end
-
   def create
     # parmas {student: {name: 'Fido Jones'}}
     student = Student.create(student_params)
@@ -20,10 +16,6 @@ class Api::V1::StudentsController < ApplicationController
     not_student = Student.find(params[:id])
     not_student.update(student_params)
     render json: not_student
-  end
-
-  def gold_team_rules
-    puts "GOLD TEAM RULES"
   end
 
   def destroy
