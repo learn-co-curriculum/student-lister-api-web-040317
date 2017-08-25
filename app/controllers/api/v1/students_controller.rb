@@ -6,6 +6,10 @@ class Api::V1::StudentsController < ApplicationController
     render json: students
   end
 
+  def gene_gene
+    puts "Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene_Gene!!!!!!!!!!!!!!!!"
+  end
+
   def create
     # parmas {student: {name: 'Fido Jones'}}
     student = Student.create(student_params)
